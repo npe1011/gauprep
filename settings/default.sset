@@ -1,0 +1,50 @@
+[Link0]
+cpu_cores = 40
+memory = 160GB
+
+[Model]
+method = B3LYP
+basis = def2SVP
+basis_h_ecp = def2SVP
+ecp_for_3d = False
+solvation = None
+solvent = Water
+dispersion = GD3BJ
+dispersion_ext = False
+nosymm = True
+guessmix = False
+stableopt = False
+
+[Job]
+selection = 4
+
+[SP]
+run_freq = True
+
+[Opt]
+job_type = Opt+Freq
+convergence = tight
+maxcycle = 30
+maxstep = 
+calcfc = 
+algorithm = default
+modredundant = 
+
+[IRC]
+algorithm = HPC
+direction = both
+maxpoints = 
+stepsize = 
+maxcyc = 
+calcfc_predictor = 
+calcfc_corrector = 
+
+[NBO]
+version = Gaussian
+save_in_chk = True
+keywords = 
+additional_keywords = 
+
+[ANY]
+job_input = 
+
