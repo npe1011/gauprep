@@ -205,7 +205,7 @@ ECP定義が見つからない場合は、ECP部分なしでファイルの出�
 
 ## 13. Empirical Dispersion（D3/D3BJ）のパラメータの設定
 
-- settings/B3ZERO.dat および settings/D3BJ に基底関数系の名前と各パラメータ値を入れておきます。
+- settings/B3ZERO.dat および settings/D3BJ.dat に汎関数の名前と各パラメータ値を入れておきます。
 - methodにその基底関数系を選び、ext. param.をチェックすると、そのパラメータがiopで追加されます。
 - 主にGaussianにパラメータが実装されていない関数系への対応に利用します（OPBEなど）。
 
