@@ -11,7 +11,6 @@ def get_gbs_path(name: str) -> Optional[Path]:
     external_basis_dir = Path(__file__).absolute().parent.parent / EXTERNAL_BASIS_DIR
     file_name = (name + '.gbs').lower()
     path = external_basis_dir / file_name
-    print(path)
     if path.is_file():
         return path
     else:
