@@ -9,12 +9,11 @@ from config import EXTERNAL_BASIS_DIR, DEFAULT_ROUTE_KEYWORDS, D3ZERO_PARAM_FILE
 
 def get_gbs_path(name: str) -> Optional[Path]:
     external_basis_dir = Path(__file__).absolute().parent.parent / EXTERNAL_BASIS_DIR
-    file_name = (name + '.gbs').lower()
-    path = external_basis_dir / file_name
-    if path.is_file():
-        return path
-    else:
-        return None
+    # For case-insensitive matching, do reverse brute force search.
+    for gbs_file in external_basis_dir.glob('*.gbs'):
+        if gbs_file.stem.lower() == name.lower():
+            return gbs_file.absolute()
+    return None
 
 
 def get_gen_basis_string(atoms: List[str], basis_name: str) -> str:
